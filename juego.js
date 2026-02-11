@@ -2,6 +2,9 @@ const canvas = document.getElementById("juego");
 const ctx = canvas.getContext("2d");
 const botonReintentar = document.getElementById("reintentar");
 
+const botonInicio = document.getElementById("inicio");
+const pantallaInicio = document.getElementById("pantallaInicio");
+
 // Imagen del avión PNG
 const avionImg = new Image();
 avionImg.src = "avion.png"; // el nombre exacto del archivo
@@ -9,6 +12,7 @@ avionImg.src = "avion.png"; // el nombre exacto del archivo
 /* Variables del juego */
 let puntuacion = 0;
 let gameOver = false;
+let juegoIniciado = false;
 
 /* Avión */
 const avion = {
@@ -130,6 +134,7 @@ function dibujarPuntuacion() {
 /* Actualizar juego */
 function actualizar() {
   if (gameOver) return;
+  if (!juegoIniciado) return;
 
   /* Movimiento avión */
   if (movIzq && avion.x > 0) avion.x -= avion.dx;
@@ -218,6 +223,11 @@ function loop() {
   if (!gameOver) requestAnimationFrame(loop);
 }
 
+botonInicio.addEventListener("click", () => {
+  juegoIniciado = true;
+  pantallaInicio.style.display = "none";
+});
+
 /* Inicializar */
 resizeCanvas();
 
@@ -225,3 +235,4 @@ resizeCanvas();
 avionImg.onload = () => {
   loop();
 };
+
