@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  background: #111;
+}
+
+/* Botones táctiles */
+.botones {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.boton {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  font-size: 6vw;
+  color: white;
+  text-align: center;
+  line-height: 15vw;
+  pointer-events: auto;
+  user-select: none;
+}
+
+/* Botón de reintentar */
+#reintentar {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: pink;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 5vw;
+  cursor: pointer;
+}
