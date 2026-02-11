@@ -14,8 +14,8 @@ let gameOver = false;
 const avion = {
   x: 50,
   y: 0,
-  width: 60,
-  height: 60,
+  width: 100,
+  height: 100,
   dx: 8
 };
 
@@ -220,4 +220,8 @@ function loop() {
 
 /* Inicializar */
 resizeCanvas();
-loop();
+
+// Esperar a que cargue el PNG antes de iniciar
+avionImg.onload = () => {
+  loop();
+};
