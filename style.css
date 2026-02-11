@@ -48,4 +48,49 @@ canvas {
   padding: 15px 30px;
   font-size: 5vw;
   cursor: pointer;
+
+}
+
+/* Pantalla de inicio */
+#pantallaInicio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Aquí irá la imagen de fondo */
+  background-image: url("portada.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Texto romántico */
+#pantallaInicio h1 {
+  color: white;
+  font-size: 8vw;
+  text-shadow: 0px 0px 15px black;
+  margin-bottom: 40px;
+}
+
+/* Botón rosa */
+#inicio {
+  background: hotpink;
+  color: white;
+  font-size: 6vw;
+
+  padding: 18px 35px;
+  border: none;
+  border-radius: 25px;
+
+  box-shadow: 0px 0px 20px pink;
+  cursor: pointer;
 }
